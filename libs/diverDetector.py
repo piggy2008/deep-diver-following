@@ -110,7 +110,7 @@ class DiverDetection:
         # filter and return output for detections that we are confident about
         N = sum(scores>self.min_score_thresh)
         localized_objs = []
-        for id_ in xrange(N):
+        for id_ in range(N):
             BBox, success_ = self.filter_box_normal(boxes[id_], im_height, im_width)
             if success_: 
                 localized_objs.append((classes[id_], BBox))
